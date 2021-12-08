@@ -1,3 +1,3 @@
 # numeros-sorteio
 
-Projeto para gerar aleátoriamente números.
+Projeto para gerar aleatoriamente números.
