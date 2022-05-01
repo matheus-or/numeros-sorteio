@@ -26,3 +26,5 @@ function verificarDuplicidade(sorteado, numerosSorteados) {
         return x === sorteado;
     });
 }
+
+console.log("Teste 01");
