@@ -8,10 +8,8 @@ function mostrarResultado() {
     } else {
         while (numerosSorteados.length < qtdNumeros) {
             let sorteado = Math.floor(Math.random() * (60 - 1) + 1);
-
-            if (numerosSorteados.length === 0 || !verificarDuplicidade(sorteado, numerosSorteados)) {
-                numerosSorteados.push(sorteado);
-            }
+            numerosSorteados.push(sorteado);
+            numerosSorteados = [...new Set(numerosSorteados)];
         }
 
         if (qtdNumeros.length === 0) {
@@ -23,10 +21,4 @@ function mostrarResultado() {
             document.getElementById('resultado').innerHTML = 'Números sorteados: ' + numerosSorteados;
         }
     }
-}
-
-function verificarDuplicidade(sorteado, numerosSorteados) {
-    numerosSorteados.forEach(x => {
-        return x === sorteado;
-    });
 }
